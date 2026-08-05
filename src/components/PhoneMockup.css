@@ -1,0 +1,160 @@
+.phone-mockup {
+  flex-shrink: 0;
+}
+
+.phone-frame {
+  width: 240px;
+  background: #0a1214;
+  border: 1px solid rgba(229, 195, 122, 0.2);
+  border-radius: 36px;
+  padding: 10px;
+  box-shadow: var(--shadow-lg);
+}
+
+.phone-notch {
+  width: 80px;
+  height: 24px;
+  background: #0a1214;
+  border-radius: 0 0 16px 16px;
+  margin: 0 auto -12px;
+  position: relative;
+  z-index: 2;
+}
+
+.phone-screen {
+  background: linear-gradient(180deg, #071214 0%, #0e1c1f 100%);
+  border-radius: 28px;
+  overflow: hidden;
+  aspect-ratio: 9/19;
+  min-height: 420px;
+  color: #fff;
+}
+
+.phone-app,
+.phone-countdown,
+.phone-prayers {
+  padding: 48px 16px 16px;
+}
+
+.app-greeting,
+.screen-kicker {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.app-card {
+  background: var(--gradient-brand);
+  color: #fff;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+}
+
+.app-card-label {
+  display: block;
+  font-size: 0.6875rem;
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+
+.app-card strong,
+.screen-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.app-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-menu li {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+}
+
+.phone-countdown .screen-title {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+}
+
+.countdown-time {
+  display: block;
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+}
+
+.countdown-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.countdown-bar-fill {
+  width: 68%;
+  height: 100%;
+  background: var(--gradient);
+  border-radius: var(--radius-full);
+}
+
+.countdown-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.phone-prayers .screen-title {
+  margin-bottom: 18px;
+}
+
+.prayer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.prayer-row strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.prayer-row--next {
+  color: var(--gold);
+}
+
+.prayer-row--next strong {
+  color: var(--gold);
+}
+
+@media (max-width: 480px) {
+  .phone-frame {
+    width: 200px;
+  }
+
+  .phone-screen {
+    min-height: 360px;
+  }
+}
