@@ -3,11 +3,15 @@ import { Link } from 'react-router-dom'
 import { useTheme } from '../context/ThemeContext'
 import './Header.css'
 
-const navLinks = [
+type NavLink = { label: string; href: string } | { label: string; to: string }
+
+const navLinks: NavLink[] = [
   { label: 'Features', href: '/#features' },
   { label: 'Autophagy', href: '/#day-guide' },
   { label: 'Why Us', href: '/#why-us' },
   { label: 'FAQ', href: '/#faq' },
+  { label: 'Blog', to: '/blog' },
+  { label: 'Contact', to: '/contact' },
 ]
 
 function ThemeToggle() {
@@ -52,16 +56,27 @@ export default function Header() {
         </Link>
 
         <nav className={`header-nav ${menuOpen ? 'open' : ''}`}>
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="header-link"
-              onClick={closeMenu}
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            'to' in link ? (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="header-link"
+                onClick={closeMenu}
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className="header-link"
+                onClick={closeMenu}
+              >
+                {link.label}
+              </a>
+            ),
+          )}
           <div className="header-nav-theme">
             <ThemeToggle />
             <span>{theme === 'dark' ? 'Light mode' : 'Dark mode'}</span>

@@ -37,10 +37,27 @@ export default function TermsConditionsPage() {
               replace rabbinic or community guidance.
             </p>
 
+            <h2>Not Medical Advice</h2>
+            <p>
+              Autophagy and metabolic phase estimates are for educational purposes
+              only. They are not a diagnosis, treatment, or substitute for advice
+              from a qualified healthcare professional. Consult a clinician before
+              fasting if you have a medical condition, are pregnant, nursing, or
+              taking medication.
+            </p>
+
             <h2>Accounts &amp; Conduct</h2>
             <p>
               You are responsible for activity under your account and for using the
-              service lawfully and respectfully.
+              service lawfully and respectfully. Do not misuse the service, attempt
+              unauthorized access, or interfere with other users.
+            </p>
+
+            <h2>Intellectual Property</h2>
+            <p>
+              The Jewish FastTrack name, logo, website, and app content are owned by
+              us or our licensors. You may not copy, modify, or redistribute them
+              without permission, except as allowed by law.
             </p>
 
             <h2>Changes</h2>
@@ -49,8 +66,16 @@ export default function TermsConditionsPage() {
               updates means you accept the revised terms.
             </p>
 
+            <h2>Contact</h2>
+            <p>
+              Questions about these terms can be sent via our{' '}
+              <Link to="/contact">Contact Us</Link> page.
+            </p>
+
             <p>
               <Link to="/">Back to home</Link>
+              {' · '}
+              <Link to="/privacy-policy">Privacy Policy</Link>
             </p>
           </div>
         </section>
