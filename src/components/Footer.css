@@ -65,6 +65,41 @@
   text-align: center;
   font-size: 0.8125rem;
   color: var(--footer-text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-social-link {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--footer-border);
+  color: var(--footer-text);
+  background: var(--card-bg);
+  transition: color var(--transition), border-color var(--transition),
+    background var(--transition), transform var(--transition);
+}
+
+.footer-social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer-social-link:hover {
+  color: var(--footer-heading);
+  border-color: var(--silver-deep);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {

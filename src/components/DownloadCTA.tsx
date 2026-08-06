@@ -1,4 +1,3 @@
-import PhoneMockup from './PhoneMockup'
 import ScrollReveal from './ScrollReveal'
 import StoreBadges from './StoreBadges'
 import './DownloadCTA.css'
@@ -20,9 +19,12 @@ export default function DownloadCTA() {
           <StoreBadges />
         </ScrollReveal>
 
-        <ScrollReveal className="download-cta-phones" delay={150} aria-hidden="true">
-          <PhoneMockup variant="dashboard" className="dl-phone-left" />
-          <PhoneMockup variant="countdown" className="dl-phone-right" />
+        <ScrollReveal className="download-cta-phones" delay={150}>
+          <img
+            src="/images/jewish-download-devices.png"
+            alt="Jewish FastTrack on phone and tablet"
+            className="download-devices-image"
+          />
         </ScrollReveal>
       </div>
     </section>

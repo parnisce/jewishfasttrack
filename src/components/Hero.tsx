@@ -1,4 +1,3 @@
-import PhoneMockup from './PhoneMockup'
 import StoreBadges from './StoreBadges'
 import './Hero.css'
 
@@ -6,11 +5,6 @@ export default function Hero() {
   return (
     <section id="home" className="hero">
       <div className="hero-media" aria-hidden="true">
-        <img
-          src="/images/jewish-hero-bg.png"
-          alt=""
-          className="hero-bg-image"
-        />
         <div className="hero-bg-shade" />
         <div className="hero-pattern" />
       </div>
@@ -31,9 +25,6 @@ export default function Hero() {
       </div>
 
       <div className="hero-content">
-        <p className="hero-brand">
-          Jewish <span>FastTrack</span>
-        </p>
         <p className="hero-hebrew" lang="he" dir="rtl">
           צום קל
         </p>
@@ -56,12 +47,12 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero-phones-clip" aria-hidden="true">
-        <div className="hero-phones">
-          <PhoneMockup variant="calendar" className="hero-phone hero-phone--left" />
-          <PhoneMockup variant="countdown" className="hero-phone hero-phone--main" />
-          <PhoneMockup variant="dashboard" className="hero-phone hero-phone--right" />
-        </div>
+      <div className="hero-phones-clip">
+        <img
+          src="/images/jewish-hero-phones.png"
+          alt="Jewish FastTrack app screens showing home, autophagy calculator, and Torah guidance"
+          className="hero-phones-image"
+        />
       </div>
     </section>
   )

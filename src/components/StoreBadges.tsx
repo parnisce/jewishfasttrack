@@ -2,16 +2,16 @@ import './StoreBadges.css'
 
 const badges = [
   {
-    href: '#download',
-    label: 'Get it on Google Play',
-    store: 'Google Play',
-    kicker: 'GET IT ON',
-  },
-  {
-    href: '#download',
+    href: 'https://apps.apple.com/ph/app/jewish-fasting-tracker/id6757437532',
     label: 'Download on the App Store',
     store: 'App Store',
     kicker: 'Download on the',
+  },
+  {
+    href: 'https://play.google.com/store/apps/details?id=com.digitallegends.jewishautophagy',
+    label: 'Get it on Google Play',
+    store: 'Google Play',
+    kicker: 'GET IT ON',
   },
 ] as const
 
@@ -24,6 +24,8 @@ export default function StoreBadges({ className = '' }: { className?: string }) 
           href={badge.href}
           className="store-badge"
           aria-label={badge.label}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <span className="store-badge-icon" aria-hidden="true">
             {badge.store === 'Google Play' ? (

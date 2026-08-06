@@ -33,24 +33,13 @@ main > section.download-cta {
   min-height: 400px;
 }
 
-.dl-phone-left {
-  transform: rotate(-10deg) translateX(24px);
-  z-index: 1;
-}
-
-.dl-phone-right {
-  transform: rotate(8deg) translateX(-24px);
-  z-index: 2;
-}
-
-.dl-phone-left .phone-frame,
-.dl-phone-right .phone-frame {
-  width: 200px;
-}
-
-.dl-phone-left .phone-screen,
-.dl-phone-right .phone-screen {
-  min-height: 360px;
+.download-devices-image {
+  width: min(560px, 100%);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.4));
+  pointer-events: none;
+  user-select: none;
 }
 
 @media (max-width: 768px) {
@@ -69,15 +58,12 @@ main > section.download-cta {
   }
 
   .download-cta-phones {
-    min-height: 280px;
+    min-height: 0;
+    order: -1;
   }
 
-  .dl-phone-left {
-    display: none;
-  }
-
-  .dl-phone-right {
-    transform: none;
+  .download-devices-image {
+    width: min(420px, 92%);
   }
 
   main > section.download-cta {

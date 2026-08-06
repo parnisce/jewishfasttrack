@@ -11,8 +11,10 @@ const footerLinks = {
     { label: 'Why Us', href: '/#why-us' },
     { label: 'FAQ', href: '/#faq' },
     { label: 'Testimonials', href: '/#testimonials' },
+    { label: 'Blog', to: '/blog' },
   ],
   support: [
+    { label: 'Contact Us', to: '/contact' },
     { label: 'Privacy Policy', to: '/privacy-policy' },
     { label: 'Terms & Conditions', to: '/terms-and-conditions' },
   ],
@@ -78,6 +80,19 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
+          <div className="footer-social">
+            <a
+              href="https://www.facebook.com/jewishfasttrack"
+              className="footer-social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Jewish FastTrack on Facebook"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14C17.18 2.09 15.95 2 14.65 2 11.95 2 10 3.72 10 6.61V9.5H7.5v4H10V22h4v-8.5z" />
+              </svg>
+            </a>
+          </div>
           <p>&copy; {new Date().getFullYear()} Jewish FastTrack. All rights reserved.</p>
         </div>
       </div>

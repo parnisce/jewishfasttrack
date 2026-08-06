@@ -27,22 +27,12 @@
   pointer-events: none;
 }
 
-.hero-bg-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 35%;
-  transform: scale(1.04);
-  animation: heroKenBurns 28s ease-in-out infinite alternate;
-  filter: grayscale(0.35) contrast(1.05) brightness(0.75);
-}
-
 .hero-bg-shade {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(7, 9, 13, 0.78) 0%, rgba(7, 9, 13, 0.5) 38%, rgba(7, 9, 13, 0.82) 72%, #07090d 100%),
-    linear-gradient(90deg, rgba(28, 42, 68, 0.45) 0%, transparent 40%, rgba(28, 42, 68, 0.3) 100%);
+    radial-gradient(ellipse 80% 55% at 50% 0%, rgba(47, 68, 104, 0.35) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(7, 9, 13, 0.2) 0%, #07090d 78%, #07090d 100%);
 }
 
 .hero-pattern {
@@ -131,19 +121,6 @@
   text-shadow: 0 2px 28px rgba(200, 204, 212, 0.3);
 }
 
-.hero-brand {
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.72);
-  margin-bottom: 12px;
-}
-
-.hero-brand span {
-  color: #fff;
-}
-
 .hero-ornament {
   display: flex;
   align-items: center;
@@ -221,39 +198,22 @@
   }
 }
 
-.hero-phones {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 16px;
-  transform: translateY(48px);
-}
-
-.hero-phone .phone-frame {
-  width: 200px;
-}
-
-.hero-phone .phone-screen {
-  min-height: 360px;
-}
-
-.hero-phone--left,
-.hero-phone--right {
-  opacity: 0.72;
-  transform: scale(0.88) translateY(36px);
-}
-
-.hero-phone--left {
-  transform: scale(0.88) translateY(36px) rotate(-8deg);
-}
-
-.hero-phone--right {
-  transform: scale(0.88) translateY(36px) rotate(8deg);
-}
-
-.hero-phone--main {
-  z-index: 2;
+.hero-phones-image {
+  width: min(920px, 92%);
+  height: auto;
+  object-fit: contain;
+  object-position: center top;
+  transform: translateY(36px);
   filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.45));
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (min-width: 901px) {
+  .hero-phones-image {
+    width: min(980px, 78%);
+    transform: translateY(48px);
+  }
 }
 
 @keyframes heroEnter {
@@ -264,15 +224,6 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes heroKenBurns {
-  from {
-    transform: scale(1.04) translateY(0);
-  }
-  to {
-    transform: scale(1.1) translateY(-1.5%);
   }
 }
 
@@ -287,15 +238,6 @@
 }
 
 @media (max-width: 900px) {
-  .hero-phone--left,
-  .hero-phone--right {
-    display: none;
-  }
-
-  .hero-phone .phone-frame {
-    width: 220px;
-  }
-
   .hero-star {
     top: 14%;
     right: 6%;
@@ -319,19 +261,15 @@
     height: clamp(240px, 58vw, 360px);
   }
 
-  .hero-phones {
-    transform: translateY(36px);
-  }
-
-  .hero-phone .phone-frame {
-    width: 200px;
+  .hero-phones-image {
+    width: min(520px, 108%);
+    transform: translateY(28px);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-content,
   .hero-phones-clip,
-  .hero-bg-image,
   .hero-star {
     animation: none;
   }
