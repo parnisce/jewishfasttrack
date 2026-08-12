@@ -2,6 +2,9 @@ import { useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import PageMeta from '../components/PageMeta'
+import { pageMeta } from '../data/pageMeta'
+import { contactSchema } from '../data/schema'
 import './LegalPage.css'
 import './ContactPage.css'
 
@@ -26,6 +29,12 @@ export default function ContactPage() {
 
   return (
     <>
+      <PageMeta
+        title={pageMeta.contact.title}
+        description={pageMeta.contact.description}
+        path={pageMeta.contact.path}
+        jsonLd={contactSchema()}
+      />
       <Header />
       <div className="legal-page">
         <section className="legal-hero">

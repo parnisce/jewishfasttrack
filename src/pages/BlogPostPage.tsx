@@ -1,17 +1,27 @@
 import { Link, useParams } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import PageMeta from '../components/PageMeta'
 import { blogPosts, getPostBySlug } from '../data/blogPosts'
+import { blogPageMeta, pageMeta } from '../data/pageMeta'
+import { blogPostSchema } from '../data/schema'
 import './LegalPage.css'
 import './BlogPage.css'
 
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>()
   const post = slug ? getPostBySlug(slug) : undefined
+  const meta = slug ? blogPageMeta[slug] : undefined
 
-  if (!post) {
+  if (!post || !meta) {
     return (
       <>
+        <PageMeta
+          title={`Post not found | ${pageMeta.blog.title}`}
+          description={pageMeta.blog.description}
+          path="/blog"
+          noindex
+        />
         <Header />
         <div className="legal-page">
           <section className="legal-hero">
@@ -37,6 +47,13 @@ export default function BlogPostPage() {
 
   return (
     <>
+      <PageMeta
+        title={meta.title}
+        description={meta.description}
+        path={meta.path}
+        image={post.image}
+        jsonLd={blogPostSchema(post)}
+      />
       <Header />
       <article className="legal-page blog-post-page">
         <section className="legal-hero">

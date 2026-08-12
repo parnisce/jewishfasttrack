@@ -1,11 +1,24 @@
 import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import PageMeta from '../components/PageMeta'
+import { pageMeta } from '../data/pageMeta'
+import { webPageSchema } from '../data/schema'
 import './LegalPage.css'
 
 export default function TermsConditionsPage() {
   return (
     <>
+      <PageMeta
+        title={pageMeta.terms.title}
+        description={pageMeta.terms.description}
+        path={pageMeta.terms.path}
+        jsonLd={webPageSchema({
+          path: pageMeta.terms.path,
+          name: 'Terms & Conditions',
+          description: pageMeta.terms.description,
+        })}
+      />
       <Header />
       <div className="legal-page">
         <section className="legal-hero">
