@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /report-audit
+Disallow: /report-audit/
+
+Sitemap: https://jewishfast.com/sitemap.xml

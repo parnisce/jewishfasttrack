@@ -1,11 +1,24 @@
 import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import PageMeta from '../components/PageMeta'
+import { pageMeta } from '../data/pageMeta'
+import { webPageSchema } from '../data/schema'
 import './LegalPage.css'
 
 export default function PrivacyPolicyPage() {
   return (
     <>
+      <PageMeta
+        title={pageMeta.privacy.title}
+        description={pageMeta.privacy.description}
+        path={pageMeta.privacy.path}
+        jsonLd={webPageSchema({
+          path: pageMeta.privacy.path,
+          name: 'Privacy Policy',
+          description: pageMeta.privacy.description,
+        })}
+      />
       <Header />
       <div className="legal-page">
         <section className="legal-hero">

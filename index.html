@@ -6,15 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Jewish FastTrack – Jewish fasting tracker with autophagy insight. Yom Kippur, Tisha B’Av, minor fasts, and personalized cellular healing timelines."
+      content="Track Yom Kippur, Tisha B’Av, and minor fasts with location-based times—and see when autophagy may begin with personalized timelines."
     />
-    <title>Jewish FastTrack – Jewish Fasting & Autophagy Tracker</title>
+    <link rel="canonical" href="https://jewishfast.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Jewish FastTrack" />
+    <meta property="og:title" content="Jewish FastTrack – Fasting Tracker & Autophagy App" />
+    <meta
+      property="og:description"
+      content="Track Yom Kippur, Tisha B’Av, and minor fasts with location-based times—and see when autophagy may begin with personalized timelines."
+    />
+    <meta property="og:url" content="https://jewishfast.com/" />
+    <meta property="og:image" content="https://jewishfast.com/images/jewish-hero-phones.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jewish FastTrack – Fasting Tracker & Autophagy App" />
+    <meta
+      name="twitter:description"
+      content="Track Yom Kippur, Tisha B’Av, and minor fasts with location-based times—and see when autophagy may begin with personalized timelines."
+    />
+    <title>Jewish FastTrack – Fasting Tracker & Autophagy App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Q1SSS9P6J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-0Q1SSS9P6J')
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        }
+        if (!f._fbq) f._fbq = n
+        n.push = n
+        n.loaded = !0
+        n.version = '2.0'
+        n.queue = []
+        t = b.createElement(e)
+        t.async = !0
+        t.src = v
+        s = b.getElementsByTagName(e)[0]
+        s.parentNode.insertBefore(t, s)
+      })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js')
+      fbq('init', '771492125852263')
+      fbq('track', 'PageView')
+    </script>
+    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <script>
@@ -23,7 +71,22 @@
         document.documentElement.setAttribute('data-theme', theme)
       })()
     </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=771492125852263&ev=PageView&noscript=1"
+        alt=""
+    /></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      type="module"
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "a8afe81a559f4e59a3982e1b679f63b5"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
   </body>
 </html>

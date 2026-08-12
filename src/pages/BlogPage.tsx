@@ -1,13 +1,22 @@
 import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import PageMeta from '../components/PageMeta'
 import { blogPosts } from '../data/blogPosts'
+import { pageMeta } from '../data/pageMeta'
+import { blogIndexSchema } from '../data/schema'
 import './LegalPage.css'
 import './BlogPage.css'
 
 export default function BlogPage() {
   return (
     <>
+      <PageMeta
+        title={pageMeta.blog.title}
+        description={pageMeta.blog.description}
+        path={pageMeta.blog.path}
+        jsonLd={blogIndexSchema()}
+      />
       <Header />
       <div className="legal-page">
         <section className="legal-hero">
